@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoutiqueManager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .theme-dark-emerald {
+        --color-primary: #10b981;
+        --color-secondary: #111827;
+        --color-background: #1f2937;
+        --color-card: #374151;
+        --color-text-primary: #f9fafb;
+        --color-text-secondary: #9ca3af;
+        --color-accent: #34d399;
+        --color-border: #4b5563;
+        --color-input-bg: #1f2937;
+      }
+
+      .theme-light-moss {
+        --color-primary: #4d7c0f;
+        --color-secondary: #ffffff;
+        --color-background: #f9fafb;
+        --color-card: #ffffff;
+        --color-text-primary: #111827;
+        --color-text-secondary: #4b5563;
+        --color-accent: #65a30d;
+        --color-border: #d1d5db;
+        --color-input-bg: #ffffff;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': 'var(--color-primary)',
+              'secondary': 'var(--color-secondary)',
+              'background': 'var(--color-background)',
+              'card': 'var(--color-card)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'accent': 'var(--color-accent)',
+              'border-color': 'var(--color-border)',
+              'input-bg': 'var(--color-input-bg)',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.1",
+    "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^3.8.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
